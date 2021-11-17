@@ -1,9 +1,6 @@
-function component() {
-  const element = document.createElement('div');
+import './style.css';
+const mainarea = document.getElementById('main');
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+const tryparagraph = document.createElement('p');
+tryparagraph.innerHTML = 'no idea';
+mainarea.appendChild(tryparagraph);
