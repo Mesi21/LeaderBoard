@@ -1,6 +1,4 @@
-import { getScores } from '../api/api_calls.js';
-
-const createBoard = (arr) => {
+const createBoard = () => {
   const tableArea = document.createElement('div');
   const tableLeft = document.createElement('div');
   const tableRight = document.createElement('div');
@@ -23,6 +21,7 @@ const createBoard = (arr) => {
   titleLeft.setAttribute('class', 'f-row');
   titleLeft.setAttribute('id', 'left');
   btnRefresh.innerHTML = 'Refresh';
+  btnRefresh.setAttribute('id', 'refresh');
   titleRecent.innerHTML = 'Recent Scores';
   scoresArea.setAttribute('class', 'f-col');
   scoresArea.setAttribute('id', 'allScores');
@@ -32,8 +31,10 @@ const createBoard = (arr) => {
   formAddScore.setAttribute('class', 'f-col');
   inputName.setAttribute('type', 'text');
   inputName.setAttribute('name', 'yourName');
+  inputName.setAttribute('id', 'name');
   inputScore.setAttribute('type', 'text');
   inputScore.setAttribute('name', 'yourScore');
+  inputScore.setAttribute('id', 'score');
   addBtn.setAttribute('type', 'submit');
   addBtn.setAttribute('value', 'Submit');
   addBtn.setAttribute('id', 'add-btn');
@@ -45,20 +46,5 @@ const createBoard = (arr) => {
   tableArea.append(tableLeft, tableRight);
   return tableArea;
 };
-  
-  const scoresList = document.getElementById('scores-list');
-  let idLi = 1;
-getScores().forEach((player) => {
-  const currLi = document.createElement('li');
-  currLi.setAttribute('id', idLi);
-  if (idLi % 2 === 0) {
-    currLi.setAttribute('class', 'row-even');
-  } else {
-    currLi.setAttribute('class', 'row-odd');
-  }
-  idLi += 1;
-  currLi.innerHTML = `${player.name}: ${player.score}`;
-  scoresList.appendChild(currLi);
-});
 
 export default createBoard;
