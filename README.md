@@ -1,12 +1,8 @@
 # LeaderBoard
 
-# Soon to be updated...
-
 This project is about an app used for adding ones score and name to a board. The page was built using JavaScript and bundled with Webpack and uses API calls. 
 
-<!-- - - - -
-![screenshot](./src/img/.jpg) -->
-
+![screenshot](./src/screenshot.png)
 
 # Built With
 
@@ -14,9 +10,6 @@ This project is about an app used for adding ones score and name to a board. The
 * Webpack
 * HTML
 * CSS
-
-# Live Demo
-<!-- [LeaderBoard App](https://mesi21.github.io/Leaderboard/)  -->
 
 # Getting Started
 
