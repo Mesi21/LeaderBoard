@@ -1,3 +1,5 @@
+import { getScores } from '../api/api_calls.js';
+
 const createBoard = (arr) => {
   const tableArea = document.createElement('div');
   const tableLeft = document.createElement('div');
@@ -35,19 +37,6 @@ const createBoard = (arr) => {
   addBtn.setAttribute('type', 'submit');
   addBtn.setAttribute('value', 'Submit');
   addBtn.setAttribute('id', 'add-btn');
-  let idLi = 1;
-  arr.forEach((player) => {
-    const currLi = document.createElement('li');
-    currLi.setAttribute('id', idLi);
-    if (idLi % 2 === 0) {
-      currLi.setAttribute('class', 'row-even');
-    } else {
-      currLi.setAttribute('class', 'row-odd');
-    }
-    idLi += 1;
-    currLi.innerHTML = `${player.name}: ${player.score}`;
-    scoresList.appendChild(currLi);
-  });
   formAddScore.append(inputName, inputScore, addBtn);
   titleLeft.append(titleRecent, btnRefresh);
   scoresArea.appendChild(scoresList);
@@ -56,5 +45,20 @@ const createBoard = (arr) => {
   tableArea.append(tableLeft, tableRight);
   return tableArea;
 };
+  
+  const scoresList = document.getElementById('scores-list');
+  let idLi = 1;
+getScores().forEach((player) => {
+  const currLi = document.createElement('li');
+  currLi.setAttribute('id', idLi);
+  if (idLi % 2 === 0) {
+    currLi.setAttribute('class', 'row-even');
+  } else {
+    currLi.setAttribute('class', 'row-odd');
+  }
+  idLi += 1;
+  currLi.innerHTML = `${player.name}: ${player.score}`;
+  scoresList.appendChild(currLi);
+});
 
 export default createBoard;
