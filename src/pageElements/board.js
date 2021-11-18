@@ -18,7 +18,7 @@ const createBoard = () => {
   tableLeft.setAttribute('id', 'left-col');
   tableRight.setAttribute('class', 'f-col');
   tableRight.setAttribute('id', 'right-col');
-  titleLeft.setAttribute('class', 'f-row');
+  titleLeft.setAttribute('class', 'f-col');
   titleLeft.setAttribute('id', 'left');
   btnRefresh.innerHTML = 'Refresh';
   btnRefresh.setAttribute('id', 'refresh');
@@ -32,8 +32,10 @@ const createBoard = () => {
   inputName.setAttribute('type', 'text');
   inputName.setAttribute('name', 'yourName');
   inputName.setAttribute('id', 'name');
+  inputName.setAttribute('placeholder', 'You\'re name')
   inputScore.setAttribute('type', 'text');
   inputScore.setAttribute('name', 'yourScore');
+  inputScore.setAttribute('placeholder', 'You\'re score');
   inputScore.setAttribute('id', 'score');
   addBtn.setAttribute('type', 'submit');
   addBtn.setAttribute('value', 'Submit');
