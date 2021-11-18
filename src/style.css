@@ -28,8 +28,8 @@ input {
 }
 
 ::placeholder {
- color: rgb(7, 7, 7);
- padding: 10px 20px;
+  color: rgb(7, 7, 7);
+  padding: 10px 20px;
 }
 
 button {
@@ -81,7 +81,7 @@ button {
 }
 
 #allScores {
-  width: 350px;;
+  width: 350px;
   border-radius: 5px;
   margin-top: 20px;
 }
@@ -127,7 +127,7 @@ button {
 #left-col {
   margin-right: 50px;
   padding: 50px;
-  background-color:rgb(146, 172, 163);
+  background-color: rgb(146, 172, 163);
 }
 
 #right-col {

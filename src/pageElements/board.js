@@ -32,7 +32,7 @@ const createBoard = () => {
   inputName.setAttribute('type', 'text');
   inputName.setAttribute('name', 'yourName');
   inputName.setAttribute('id', 'name');
-  inputName.setAttribute('placeholder', 'You\'re name')
+  inputName.setAttribute('placeholder', 'You\'re name');
   inputScore.setAttribute('type', 'text');
   inputScore.setAttribute('name', 'yourScore');
   inputScore.setAttribute('placeholder', 'You\'re score');
