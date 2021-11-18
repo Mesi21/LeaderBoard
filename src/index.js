@@ -28,8 +28,8 @@ const refresh = document.getElementById('refresh');
 refresh.addEventListener('click', (e) => {
   e.preventDefault();
   getScores().then((v) => {
-    if(scoresList.children.length !== v.length) {
-      scoresList.innerHTML= '';
+    if (scoresList.children.length !== v.length) {
+      scoresList.innerHTML = '';
       let idLi = 1;
       v.forEach((player) => {
         const currLi = document.createElement('li');
@@ -38,12 +38,12 @@ refresh.addEventListener('click', (e) => {
           currLi.setAttribute('class', 'row-even');
         } else {
           currLi.setAttribute('class', 'row-odd');
-        };
+        }
         idLi += 1;
         currLi.innerHTML = `${player.user}: ${player.score}`;
         scoresList.appendChild(currLi);
       });
-    };
+    }
   });
 });
 
@@ -56,7 +56,7 @@ getScores().then((t) => {
       currLi.setAttribute('class', 'row-even');
     } else {
       currLi.setAttribute('class', 'row-odd');
-    };
+    }
     idLi += 1;
     currLi.innerHTML = `${player.user}: ${player.score}`;
     scoresList.appendChild(currLi);
